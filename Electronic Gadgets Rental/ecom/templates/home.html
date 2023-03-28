@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Gadget Rental</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+      <style>
+         .mobile_img{
+            height:400px;
+         }
+         .productimg{
+            height:100%;
+            width:100%;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section haeder_main">
+         <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light justify-content-between">
+               <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="/home">Home</a>
+                  <a href="/renteditems">Rented Iteams</a>
+                  <a href="/validate_customer">Validation</a>
+                  <a href="/contact">Contact</a>
+                  <a href="/logout">Logout</a>
+               </div>
+               <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img src="{% static 'images/toggle-icon.png' %}"></span>
+               <a class="navbar-brand" href="home"><h1 style="color:#41476A; font-size:180%;"><b>Electronic Gadget Rental Site</b></h1></a></a>
+               <form class="form-inline ">
+                  <div class="login_text">
+                     <ul>
+                        <li><a href="/usr_details"><img src="{% static 'images/user-icon.png' %}"></a></li>
+                        <li><a href="view_cart"><img src="{% static 'images/trolly-icon.png' %}"></a></li>
+                     </ul>
+                  </div>
+               </form>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div class="image_1"><img src="{% static 'images/img-1.png' %}" style="width:100%"></div>
+                        </div>
+                        <div class="col-md-4">
+                           <h1 class="banner_taital">Big Offers</h1>
+                           <div class="buynow_bt active"><a href="#catsec">Rent Now</a></div>
+                           <div class="contact_bt"><a href="contact">Contact Us</a></div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="image_2"><img src="{% static 'images/img-2.png' %}" style="width:100%"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div class="image_1"><img src="{% static 'images/img-1.png' %}" style="width:100%"></div>
+                        </div>
+                        <div class="col-md-4">
+                           <h1 class="banner_taital">Big Offers</h1>
+                           <div class="buynow_bt active"><a href="#catsec">Rent Now</a></div>
+                           <div class="contact_bt"><a href="contact">Contact Us</a></div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="image_2"><img src="{% static 'images/img-2.png' %}" style="width:100%"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-4">
+                           <div class="image_1"><img src="{% static 'images/img-1.png' %}" style="width:100%"></div>
+                        </div>
+                        <div class="col-md-4">
+                           <h1 class="banner_taital">Big Offers</h1>
+                           <div class="buynow_bt active"><a href="#catsec">Rent Now</a></div>
+                           <div class="contact_bt"><a href="contact">Contact Us</a></div>
+                        </div>
+                        <div class="col-md-4">
+                           <div class="image_2"><img src="{% static 'images/img-2.png' %}" style="width:100%"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      <!-- banner section end -->
+      <!-- catagary section start -->
+      <div id="catsec" class="catagary_section layout_padding">
+         <div class="container">
+            <div class="catagary_main">
+               <div class="catagary_left">
+                  <h2 class="categary_text">Categary</h2>
+               </div>
+               <div class="catagary_right">
+                  <div class="catagary_menu">
+                     <ul>
+                        <li><a href="#mobile">Mobiles</a></li>
+                        <li><a href="#Computers">Computers</a></li>
+                        <li><a href="#Camera">Camera</a></li>
+                        <li><a href="#Laptop">Laptop</a></li>
+                        <li><a href="#TV">TV</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="mobile" class="catagary_section_2">
+         <div class="container-fluid">
+            <div class="row">
+            {% for i in products %}
+               <div class="col-md-4 mt-3">
+                  <div class="box_man">
+                     <h3 class="mobile_text">{{i.product_brand}}</h3>
+                     <div class="mobile_img"><img class="productimg" src="{{i.product_image.url}}"></div>
+                     <div class="cart_main">
+                        <div class="cart_bt"><a href="{% url 'cart' i.id %}">Add To Cart</a></div>
+                        <h4 class="samsung_text">{{i.product_name}}</h4>
+                        <h6 class="rate_text"><a href="#">{{i.rental_price}}</a></h6>
+                        <h6 class="rate_text_1">{{i.price}}</h6>
+                     </div>
+                  </div>
+               </div>
+            {% endfor %}
+            </div>
+         </div>
+      </div>
+      <!-- catagary section end -->
+      <!-- computers section start -->
+      <div id="Laptop" class="computers_section layout_padding">
+         <div class="container">
+            <h1 class="computers_taital">Computers & Laptop</h1>
+         </div>
+      </div>
+      <div id="Computers" class="computers_section_2">
+         <div class="container-fluid">
+            <div class="computer_main">
+               <div class="row">
+               {% for i in product_com %}
+                  <div class="col-md-4">
+                     <div class="computer_img"><img src="{{i.product_image.url}}"></div>
+                     <h4 class="computer_text">{{i.product_name}}</h4>
+                     <div class="computer_text_main">
+                        <h4 class="dell_text">{{i.product_brand}}</h4>
+                        <h6 class="price_text"><a href="#">{{i.rental_price}}</a></h6>
+                        <h6 class="price_text_1"><a href="#">{{i.price}}</a></h6>
+                     </div>
+                     <div class="cart_bt_1"><a href="{% url 'cart' i.id %}">Add To Cart</a></div>
+                  </div>
+               {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- computers section end -->
+      <!-- mans clothes section start -->
+      <div class="mans_section layout_padding">
+         <div class="container">
+            <h1 class="computers_taital">Gaming Gadgets</h1>
+         </div>
+      </div>
+      <div class="mans_section_2">
+         <div class="container-fluid">
+            <div class="mans_main">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="offer_text">Best  Offer Every Gaming Iteams</h1>
+                     <p class="lorem_text">There are many variations of passages of Lorem Ipsum available,but the majority have</p>
+                     <div class="read_bt"><a href="gamingsec">Rent Now</a></div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image_3"><img src="{% static 'images/gadget2.png' %}" style="width:100%; height:350px;"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- mans clothes section end -->
+      <!-- womans clothes section start -->
+      <div id="TV" class="computers_section layout_padding">
+         <div class="container">
+            <h1 class="womans_taital">Domestic Products</h1>
+            <div class="womans_section_2">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="Get_offer_text">Get <br>offer Every Iteams</h1>
+                     <div class="read_bt"><a href="domesticsec">Rent Now</a></div>
+                  </div>
+                  <div class="col-md-6 mt-5">
+                     <div class="image_4"><img src="{% static 'images/gadget5.png' %}"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- womans clothes section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding margin_top_90">
+         <div class="container">
+            <div class="footer_logo_main">
+               <div class="footer_logo"><a href="home"><img src="{% static 'images/footer-logo.png' %}"></a></div>
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007776%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjw_MqgBhAGEiwAnYOAeiDhjmQVFyatjGi9wt7wyq7wmFhIpJCqWoVzpm4HQGEPFWOYpjl5JRoCpCoQAvD_BwE"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+                     <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
+                     <li><a href="https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.127961666340_crid.601257986818_kw.linked%20in%20search_d.c_tid.kwd-319234148525_n.g_mt.e_geo.1007776&mcid=6844056167778418689&cid=&gclid=CjwKCAjw_MqgBhAGEiwAnYOAegJYo86M8zYAB7Vg4S1zlFt1NWdbR_q571kTk1o5I-MLQuhlS9HkDBoCFsgQAvD_BwE&gclsrc=aw.ds"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
+                     <li><a href="https://www.instagram.com/"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                     <li><a href="https://www.youtube.com/"><img src="{% static 'images/youtub-icon.png' %}"></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="footer_section_2" id="footer">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="adderss_text">About</h4>
+                     <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="adderss_text">Menu</h4>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="#mobile">Mobiles</a></li>
+                           <li><a href="#Computers">Computers</a></li>
+                           <li><a href="#Camera">Camera</a></li>
+                           <li><a href="#Laptop">Laptop</a></li>
+                           <li><a href="#TV">TV</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="adderss_text">Useful Link</h4>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="#">Adipiscing</a></li>
+                           <li><a href="#">Elit, sed do</a></li>
+                           <li><a href="#">Eiusmod</a></li>
+                           <li><a href="#">Tempor</a></li>
+                           <li><a href="#">incididunt</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h4 class="adderss_text">Contact</h4>
+                     <div class="call_text"><img src="{% static 'images/map-icon.png' %}"><span class="paddlin_left_0"><a href="#">London 145 United Kingdom</a></span></div>
+                     <div class="call_text"><img src="{% static 'images/call-icon.png' %}"><span class="paddlin_left_0"><a href="#">+7586656566</a></span></div>
+                     <div class="call_text"><img src="{% static 'images/mail-icon.png' %}"><span class="paddlin_left_0"><a href="#">volim@gmail.com</a></span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'js/owl.carousel.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+      <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "100%";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script> 
+   </body>
+</html>
